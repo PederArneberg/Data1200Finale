@@ -12,20 +12,21 @@ nav {
 }
 
 nav>ul {
-    margin: 0 auto;
-    display: inline-block;
-    outline: 2px solid black;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     width: min-content;
+    margin: 0 auto;
+
+    outline: 2px solid black;
 }
 
 nav>ul>li {
     display: inline-block;
     margin: 0 0.5rem;
+    
     outline: 2px solid black;
-
+    
     white-space: nowrap;
 }
