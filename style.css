@@ -1,6 +1,8 @@
 :root {
     --animation-fast: 150ms;
     --animation-slow: 300ms;
+
+    --color-main-accent: rgb(248, 213, 72);
 }
 
 html {
@@ -16,6 +18,8 @@ html {
     box-sizing: border-box;
 }
 
+/* Navbar styling starts here */
+
 .navbar {
     position: relative;
     top: 0;
@@ -25,6 +29,10 @@ html {
     padding: 1rem 0;
 }
 
+.navbar .navbar-toggle {
+    /* display: none; */
+}
+
 .navbar .navbar-toggle-label {
     position: relative;
     display: block;
@@ -32,37 +40,43 @@ html {
     width: 3rem;
     height: 3rem;
     margin-left: 1rem;
-
+    
     background-color: black;
+
+    /* Animation */
+    transition: background-color var(--animation-slow) ease var(--animation-slow);
+}
+
+.navbar-toggle:checked ~ .navbar-toggle-label {
+    transition: background-color var(--animation-slow) ease;
+    background-color: yellow
 }
 
 .navbar .icon {
+    visibility: hidden;
+
     transform: translateY(200%);
     
     width: 100%;
     height: 20%;
-
     margin: 0, auto;
-
-    transition: transform var(--animation-fast) ease-out;
-
 }
 
 .navbar .icon::before,
 .navbar .icon::after {
     content: "";
     display: block;
-    
+    visibility: visible;
     position: absolute;
-    
-    z-index: 99;
     
     width: 100%;
     height: 100%;
-    
+
     background-color: yellow;
+
+    /* Animation */
+    transition: transform var(--animation-fast) ease-out, background-color var(--animation-slow) ease var(--animation-slow);
     transform-origin: center;
-    transition: transform var(--animation-fast) ease-out;
 }
 
 .navbar .icon::before {
@@ -74,34 +88,40 @@ html {
 }
 
 .navbar-toggle:checked ~ *>.icon::before {
-    transform:  rotate(45deg) scaleX(100%) ;
+    transform: rotate(45deg) scaleX(120%);
+    
+    background-color: black;
+
+    /* Animation */
+    transition: background-color var(--animation-slow) ease, transform var(--animation-fast) ease-out var(--animation-slow);
 }
 
 .navbar-toggle:checked ~ *>.icon::after {
-    transform: rotate(-45deg) scaleX(100%);
-}
+    transform: rotate(-45deg) scaleX(120%);
 
-.navbar .navbar-toggle {
-    display: none;
+    background-color: black;
+    /* Animation */
+    transition: background-color var(--animation-slow) ease, transform var(--animation-fast) ease-out var(--animation-slow);
 }
 
 .navbar ul {
     position: absolute;
     left: 0;
+
     display: flex;
-    gap: 0.5em;
     flex-direction: column;
+    gap: 0.5em;
+
     width: 100%;
+    padding: 1rem 0;
+
+    background-color: yellow;
+
+    list-style: none;
 
     transform-origin: top;
     transform: scale(1,0);
     transition: transform var(--animation-slow) ease-out var(--animation-fast);
-
-    
-    background-color: yellow;
-    list-style: none;
-
-    padding: 1rem 0;
 }
 
 .navbar li {
@@ -111,8 +131,27 @@ html {
     transform: scale(0,1);
     transform-origin: left;
     transition: transform var(--animation-fast) ease-out;
+}
 
+/* .navbar li:hover {
     border-bottom: 0.125rem solid black;
+    color: yellow;
+    background-color: black;
+} */
+
+.navbar a:focus,
+.navbar-toggle-label:focus {
+    outline: 0.25rem solid black;
+    outline-offset: 0.125rem;
+
+    z-index: 99;
+}
+
+input:focus + .navbar-toggle-label {
+    outline: 0.25rem solid black;
+    outline-offset: 0.125rem;
+
+    z-index: 99;
 }
 
 .navbar a {
@@ -123,8 +162,10 @@ html {
     white-space: nowrap;
     text-transform: uppercase;
 
-    color: black;
+    color: inherit;
 }
+
+
 
 .navbar-toggle:checked ~ ul {
     transform: scale(1,1);
