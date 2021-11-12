@@ -39,9 +39,10 @@ html {
 .navbar .navbar-toggle-label {
     display: block;
 
-    width: 3rem;
-    height: 3rem;
-    margin-left: 1rem;
+    width: 2rem;
+    height: 2rem;
+    margin-left: auto;
+    margin-right: 1rem;
     
     background-color: black;
 
@@ -128,15 +129,16 @@ html {
 
 .navbar li {
     width: min-content;
-    margin-left: 1rem;
+    margin-left: auto;
+    margin-right: auto;
 
-    transform: scale(0,1);
-    transform-origin: left;
+    transform: scale(1,0);
+    transform-origin: top;
     transition: transform var(--animation-fast) ease-out;
 }
 
 .navbar .active {
-    border-bottom: 0.125rem solid black;
+    /* border-bottom: 0.25rem solid black; */
     color: yellow;
     background-color: black;
 }
@@ -165,7 +167,7 @@ input:focus + .navbar-toggle-label,
 .navbar a {
     display: block;
     
-    font-size: 2rem;
+    font-size: 1rem;
     text-decoration: none;
     white-space: nowrap;
     text-transform: uppercase;
@@ -181,6 +183,31 @@ input:focus + .navbar-toggle-label,
 .navbar-toggle:checked ~ ul li {
     transform: scale(1,1);
     transition: transform var(--animation-slow) ease-out var(--animation-slow);
+}
+
+@media screen and (min-width: 600px) {
+
+    .navbar-toggle,
+    .navbar-toggle-label {
+        display: none !important;
+    }
+
+    .navbar ul {
+        top: 0;
+        flex-direction: row;
+        justify-content: flex-end;
+        transform: scale(1,1);
+    }
+
+    .navbar li {
+        margin: 0;
+        margin-right: 1rem;
+        transform: scale(1,1);
+    }
+
+    .navbar a {
+        /* font-size: 1rem; */
+    }
 }
 
 /* Eksempel på bruk av grid: */
