@@ -135,26 +135,32 @@ html {
     transition: transform var(--animation-fast) ease-out;
 }
 
-/* .navbar li:hover {
+.navbar .active {
     border-bottom: 0.125rem solid black;
     color: yellow;
     background-color: black;
-} */
+}
 
 .navbar a:focus,
-.navbar-toggle-label:focus {
-    outline: 0.25rem solid black;
+.navbar a:hover,
+input:focus + .navbar-toggle-label,
+.navbar-toggle-label:hover {
+    outline: 0.125rem solid black;
     outline-offset: 0.125rem;
 
     z-index: 99;
 }
 
-input:focus + .navbar-toggle-label {
+.navbar-toggle:checked .navbar-toggle-label{
+    outline: unset;
+}
+
+/* input:focus + .navbar-toggle-label {
     outline: 0.25rem solid black;
     outline-offset: 0.125rem;
 
     z-index: 99;
-}
+} */
 
 .navbar a {
     display: block;
@@ -167,8 +173,6 @@ input:focus + .navbar-toggle-label {
     color: inherit;
 }
 
-
-
 .navbar-toggle:checked ~ ul {
     transform: scale(1,1);
     transition: transform var(--animation-slow) ease-out;
@@ -179,6 +183,30 @@ input:focus + .navbar-toggle-label {
     transition: transform var(--animation-slow) ease-out var(--animation-slow);
 }
 
-main {
-    padding: 5rem 20vw;
+/* Eksempel på bruk av grid: */
+
+.fun-main {
+    display: grid;
+    gap: 3rem;
+    
+    
+    /* Denne bestemmer bredden på hver kolonne:  */
+    grid-template-columns: 3fr 1fr;
+    
+    /* Denne bestemmer plasseringen:  */
+    grid-template-areas: "article aside";
+
+    padding: 5rem 10vw;
+}
+
+.fun-main article {
+    grid-area: article;
+}
+
+.fun-main aside {
+    grid-area: aside;
+}
+
+.fun-main p {
+    margin: 2rem 0;
 }
