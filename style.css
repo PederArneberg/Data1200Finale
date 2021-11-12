@@ -144,25 +144,21 @@ html {
 }
 
 .navbar a:focus,
-.navbar a:hover,
-input:focus + .navbar-toggle-label,
-.navbar-toggle-label:hover {
+input:focus + .navbar-toggle-label {
     outline: 0.125rem solid black;
     outline-offset: 0.125rem;
 
     z-index: 99;
 }
 
+.navbar a:hover {
+    color: yellow;
+    background-color: black;
+}
+
 .navbar-toggle:checked .navbar-toggle-label{
     outline: unset;
 }
-
-/* input:focus + .navbar-toggle-label {
-    outline: 0.25rem solid black;
-    outline-offset: 0.125rem;
-
-    z-index: 99;
-} */
 
 .navbar a {
     display: block;
