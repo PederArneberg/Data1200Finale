@@ -1,55 +1,182 @@
+:root {
+    --animation-fast: 150ms;
+    --animation-slow: 300ms;
+
+    --color-main-accent: rgb(248, 213, 72);
+}
+
 html {
     font-size: 16px;
     font-family: sans-serif;
 }
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
+/* Navbar styling starts here */
 
-    position: sticky;
+.navbar {
+    position: relative;
+    top: 0;
+    width: 100%;
+    background-color: yellow;
+
+    padding: 1rem 0;
+}
+
+.navbar .navbar-toggle {
+    /* display: none; */
+}
+
+.navbar .navbar-toggle-label {
+    position: relative;
+    display: block;
+
+    width: 3rem;
+    height: 3rem;
+    margin-left: 1rem;
+    
+    background-color: black;
+
+    /* Animation */
+    transition: background-color var(--animation-slow) ease var(--animation-slow);
+}
+
+.navbar-toggle:checked ~ .navbar-toggle-label {
+    transition: background-color var(--animation-slow) ease;
+    background-color: yellow
+}
+
+.navbar .icon {
+    visibility: hidden;
+
+    transform: translateY(200%);
     
     width: 100%;
-    padding: 1em;
+    height: 20%;
+    margin: 0, auto;
+}
+
+.navbar .icon::before,
+.navbar .icon::after {
+    content: "";
+    display: block;
+    visibility: visible;
+    position: absolute;
     
+    width: 100%;
+    height: 100%;
+
     background-color: yellow;
+
+    /* Animation */
+    transition: transform var(--animation-fast) ease-out, background-color var(--animation-slow) ease var(--animation-slow);
+    transform-origin: center;
+}
+
+.navbar .icon::before {
+   transform: translateY(-100%);
+}
+
+.navbar .icon::after {
+    transform: translateY(100%);
+}
+
+.navbar-toggle:checked ~ *>.icon::before {
+    transform: rotate(45deg) scaleX(120%);
+    
+    background-color: black;
+
+    /* Animation */
+    transition: background-color var(--animation-slow) ease, transform var(--animation-fast) ease-out var(--animation-slow);
+}
+
+.navbar-toggle:checked ~ *>.icon::after {
+    transform: rotate(-45deg) scaleX(120%);
+
+    background-color: black;
+    /* Animation */
+    transition: background-color var(--animation-slow) ease, transform var(--animation-fast) ease-out var(--animation-slow);
 }
 
 .navbar ul {
-    display: flex;
-    flex-direction: row;
-    gap: 1em;
+    position: absolute;
+    left: 0;
 
-    width: min-content;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+
+    width: 100%;
+    padding: 1rem 0;
+
+    background-color: yellow;
 
     list-style: none;
-    text-align: left;
+
+    transform-origin: top;
+    transform: scale(1,0);
+    transition: transform var(--animation-slow) ease-out var(--animation-fast);
 }
 
 .navbar li {
-    padding: 0.5em;
-    
-    outline: 2px solid black;
+    width: min-content;
+    margin-left: 1rem;
+
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: transform var(--animation-fast) ease-out;
+}
+
+/* .navbar li:hover {
+    border-bottom: 0.125rem solid black;
+    color: yellow;
+    background-color: black;
+} */
+
+.navbar a:focus,
+.navbar-toggle-label:focus {
+    outline: 0.25rem solid black;
+    outline-offset: 0.125rem;
+
+    z-index: 99;
+}
+
+input:focus + .navbar-toggle-label {
+    outline: 0.25rem solid black;
+    outline-offset: 0.125rem;
+
+    z-index: 99;
 }
 
 .navbar a {
-    color: black;
+    display: block;
+    
+    font-size: 2rem;
     text-decoration: none;
-    text-transform: uppercase;
     white-space: nowrap;
+    text-transform: uppercase;
+
+    color: inherit;
 }
 
-.navbar-toggle {
-    display: none;
-}
+
 
 .navbar-toggle:checked ~ ul {
-    flex-direction: column;
+    transform: scale(1,1);
+    transition: transform var(--animation-slow) ease-out;
+}
+
+.navbar-toggle:checked ~ ul li {
+    transform: scale(1,1);
+    transition: transform var(--animation-slow) ease-out var(--animation-slow);
+}
+
+@media screen and (min-widt: 960px) {
+    
 }
