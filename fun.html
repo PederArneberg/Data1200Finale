@@ -8,12 +8,15 @@
 
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
+
+    
 </head>
 
 <body>
     <nav class="navbar">
         <input type="checkbox" id="navbar-toggle" class="navbar-toggle">
-        <label for="navbar-toggle" class="navbar-toggle-label">
+        <label for="navbar-toggle" id="navbar-toggle-label" class="navbar-toggle-label"
+            onclick="javascript:alert('Hello')">
             <div class="icon"></div>
         </label>
         <ul>
@@ -23,6 +26,19 @@
             <li><a href="technologyandsociety.html">Topical Information</a></li>
             <li><a href="fun.html" class="active">Fun</a></li>
         </ul>
+        
+        <!-- Script to enable pressing enter to toggle the nav menu -->
+        <!-- inspired from https://www.w3schools.com/howto/howto_js_trigger_button_enter.asp -->
+        <script>
+            var toggle = document.getElementById("navbar-toggle");
+            toggle.addEventListener("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    toggle.click()
+                }
+            });
+        </script>
+
     </nav>
 
     <main class="fun-main">

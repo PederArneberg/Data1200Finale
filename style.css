@@ -21,6 +21,7 @@ html {
 /* Navbar styling starts here */
 
 .navbar {
+    /* Can be changed to sticky */
     position: relative;
     top: 0;
 
@@ -181,6 +182,20 @@ input:focus + .navbar-toggle-label {
     transition: transform var(--animation-slow) ease-out var(--animation-slow);
 }
 
+/* Eksempel på bruk av grid: */
+
+.fun-main {
+    display: grid;
+    gap: 3rem;
+
+    padding: 5rem 5vw;
+}
+
+
+.fun-main p {
+    margin: 2rem 0;
+}
+
 @media screen and (min-width: 600px) {
 
     .navbar-toggle,
@@ -204,32 +219,23 @@ input:focus + .navbar-toggle-label {
     .navbar a {
         /* font-size: 1rem; */
     }
-}
 
-/* Eksempel på bruk av grid: */
-
-.fun-main {
-    display: grid;
-    gap: 3rem;
-    
-    
-    /* Denne bestemmer bredden på hver kolonne:  */
+    .fun-main {
+        /* Denne bestemmer bredden på hver kolonne:  */
     grid-template-columns: 3fr 1fr;
     
     /* Denne bestemmer plasseringen:  */
     grid-template-areas: "article aside";
 
     padding: 5rem 10vw;
+    }
+
+    .fun-main article {
+        grid-area: article;
+    }
+    
+    .fun-main aside {
+        grid-area: aside;
+    }
 }
 
-.fun-main article {
-    grid-area: article;
-}
-
-.fun-main aside {
-    grid-area: aside;
-}
-
-.fun-main p {
-    margin: 2rem 0;
-}
