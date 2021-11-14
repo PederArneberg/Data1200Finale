@@ -188,12 +188,21 @@ input:focus + .navbar-toggle-label {
     display: grid;
     gap: 3rem;
 
+    /* padding: 5rem 5vw; */
+}
+
+.content {
     padding: 5rem 5vw;
 }
 
 
 .fun-main p {
     margin: 2rem 0;
+}
+
+footer.fun {
+    padding: 2rem 10vw;
+    background-color: yellow;
 }
 
 @media screen and (min-width: 600px) {
@@ -204,15 +213,19 @@ input:focus + .navbar-toggle-label {
     }
 
     .navbar ul {
-        top: 0;
-        flex-direction: row;
+        flex-flow: row;
         justify-content: flex-end;
+        gap: 2rem;
+        
+        top: 0;
+        padding: 1rem 10vw;
+        
         transform: scale(1,1);
     }
 
     .navbar li {
         margin: 0;
-        margin-right: 1rem;
+        /* margin-right: 1rem; */
         transform: scale(1,1);
     }
 
@@ -226,7 +239,9 @@ input:focus + .navbar-toggle-label {
     
     /* Denne bestemmer plasseringen:  */
     grid-template-areas: "article aside";
+    }
 
+    .content {
     padding: 5rem 10vw;
     }
 
