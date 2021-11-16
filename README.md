@@ -14,6 +14,8 @@ outline: 0;
 Dette er taget fra https://webaim.org/blog/plague-of-outline-0/
 jeg syns det var vigtig at huske på, og noget jeg kan bruke på siden om accessibility
 
+Artikkel om bilder:
+https://html.com/attributes/img-srcset/#Individual_File_Sizes
 
 Sjekkliste:
 

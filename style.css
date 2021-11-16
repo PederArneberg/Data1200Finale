@@ -35,7 +35,7 @@ nav {
     /* grid-area: header; */
 
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
     row-gap: 2rem;
@@ -44,14 +44,31 @@ nav {
     background-color: var(--color-main-accent);
 }
 
-.nav-links {
+.nav-toggle {
     display: flex;
+    gap: 1rem;
+    align-items: center;
+    border: none;
+    background-color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-align: center;
+}
+
+.nav-links {
+    display: none;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
     row-gap: 1rem;
     column-gap: 1rem;
     text-align: right;
+}
+
+.nav-links.show {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .nav-links li {
@@ -68,17 +85,6 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     color: black;
-}
-
-.nav-toggle {
-    display: none;
-    gap: 1rem;
-    align-items: center;
-    border: none;
-    background-color: inherit;
-    font: inherit;
-    cursor: pointer;
-    text-align: center;
 }
 
 .hamburger-icon {
@@ -131,6 +137,19 @@ nav {
     padding: 2rem 0;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 2rem;
+    background-color: darkgrey;
+}
+.container p {
+    margin: 1rem 0;
+    max-width: 75ch;
+}
+
 /* Footer styling starts here */
 
 .fun footer {
@@ -138,36 +157,6 @@ nav {
 
     padding: 2rem 10vw;
     background-color: var(--color-main-accent);
-}
-
-@media screen and (max-width: 800px) {
-    nav {
-        justify-content: space-between;
-    }
-    .nav-toggle {
-        display: flex;
-    }
-    .nav-links {
-        display: none;
-        flex-direction: row;
-    }
-    .nav-links.show {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: auto;
-        padding: 2rem;
-        background-color: darkgrey;
-    }
-    .container p {
-        margin: 1rem 0;
-        max-width: 75ch;
-    }
 }
 
 @media screen and (min-width: 800px) {
@@ -183,5 +172,19 @@ nav {
     }
     .fun main aside {
         grid-area: aside;
+    }
+
+    nav {
+        justify-content: space-around;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: max-content;
     }
 }
