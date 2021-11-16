@@ -1,5 +1,7 @@
 # Data1200Finale
 alle bilder er taget fra unsplash.com
+banner med "everyone can code" https://unsplash.com/photos/mDinBvq1Sfg
+bilde med gruppe av mennesker som koder https://unsplash.com/photos/QckxruozjRg
 
 "The prevalence of this is increased by the inclusion of outline:0 in many CSS reset files, such as Eric Meyer’s CSS Reset. It applies outline:0 to all page elements. While he clearly indicates that focus styles should be re-implemented,…
 

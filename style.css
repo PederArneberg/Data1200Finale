@@ -2,7 +2,12 @@
     --animation-fast: 150ms;
     --animation-slow: 300ms;
 
+    --navbar-height: 8vh;
+
+    --nav-shadow: 0px 3px 3px rgba(0, 0, 0, 0.205);
+
     --color-main-accent: rgb(248, 213, 72);
+    --color-dark-grey: rgb(29, 29, 29);
 }
 
 html {
@@ -19,194 +24,171 @@ html {
 }
 
 /* Navbar styling starts here */
-
-.navbar {
-    position: relative;
-    top: 0;
-
-    width: 100%;
-
-    background-color: yellow;
-
-    padding: 1rem 0;
-}
-
-.navbar .navbar-toggle {
-    position: absolute;
-    left: -500px;
-}
-
-.navbar .navbar-toggle-label {
-    display: block;
-
-    width: 3rem;
-    height: 3rem;
-    margin-left: 1rem;
-    
-    background-color: black;
-
-    /* Animation */
-    transition: background-color var(--animation-slow) ease var(--animation-slow);
-}
-
-.navbar-toggle:checked ~ .navbar-toggle-label {
-    transition: background-color var(--animation-slow) ease;
-    background-color: yellow
-}
-
-.navbar .icon {
-    visibility: hidden;
-
-    transform: translateY(200%);
-    
-    width: 100%;
-    height: 20%;
-    margin: 0, auto;
-}
-
-.navbar .icon::before,
-.navbar .icon::after {
-    content: "";
-    display: block;
-    visibility: visible;
-    position: absolute;
-    
-    width: 100%;
-    height: 100%;
-
-    background-color: yellow;
-
-    /* Animation */
-    transition: transform var(--animation-fast) ease-out, background-color var(--animation-slow) ease var(--animation-slow);
-    transform-origin: center;
-}
-
-.navbar .icon::before {
-   transform: translateY(-100%);
-}
-
-.navbar .icon::after {
-    transform: translateY(100%);
-}
-
-.navbar-toggle:checked ~ *>.icon::before {
-    transform: rotate(45deg) scaleX(120%);
-    
-    background-color: black;
-
-    /* Animation */
-    transition: background-color var(--animation-slow) ease, transform var(--animation-fast) ease-out var(--animation-slow);
-}
-
-.navbar-toggle:checked ~ *>.icon::after {
-    transform: rotate(-45deg) scaleX(120%);
-
-    background-color: black;
-    /* Animation */
-    transition: background-color var(--animation-slow) ease, transform var(--animation-fast) ease-out var(--animation-slow);
-}
-
-.navbar ul {
-    position: absolute;
-    top: 100%;
-
+nav {
     display: flex;
-    flex-direction: column;
-    gap: 0.5em;
+    justify-content: space-around;
+    align-items: baseline;
+    flex-wrap: wrap;
+    row-gap: 2rem;
 
-    width: 100%;
-    padding: 1rem 0;
+    padding: 1rem;
 
-    background-color: yellow;
+    box-shadow: var(--nav-shadow);
+    background-color: var(--color-main-accent);
+}
 
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+
+    row-gap: 1rem;
+    column-gap: 1rem;
+
+    text-align: right;
+}
+
+.nav-links li {
     list-style: none;
-
-    transform-origin: top;
-    transform: scale(1,0);
-    transition: transform var(--animation-slow) ease-out var(--animation-fast);
 }
 
-.navbar li {
-    width: min-content;
-    margin-left: 1rem;
-
-    transform: scale(0,1);
-    transform-origin: left;
-    transition: transform var(--animation-fast) ease-out;
+.nav-links .active {
+    position: relative;
+    border-bottom: 2px solid black;
+    z-index: 1;
 }
 
-.navbar .active {
-    border-bottom: 0.125rem solid black;
-    color: yellow;
+.nav-links a {
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+}
+
+.nav-toggle {
+    display: none;
+    gap: 1rem;
+    align-items: center;
+
+    border: none;
+    background-color: inherit;
+    font: inherit;
+
+    cursor: pointer;
+
+    text-align: center;
+}
+
+.hamburger-icon {
+    position: relative;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; */
+
+    width: 2rem;
+    height: 1.5em;
+}
+
+.burger-line {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    top: 50%;
+    translate: 0 -50%;
+
+    height: 10%;
     background-color: black;
 }
 
-.navbar a:focus,
-.navbar a:hover,
-input:focus + .navbar-toggle-label,
-.navbar-toggle-label:hover {
-    outline: 0.125rem solid black;
-    outline-offset: 0.125rem;
+.burger-line:nth-of-type(1) {
+    transform: translateY(-300%);
 
-    z-index: 99;
+}
+.burger-line:nth-of-type(3) {
+    transform: translateY(300%);
 }
 
-.navbar-toggle:checked .navbar-toggle-label{
-    outline: unset;
+.clicked .burger-line {
+    transform: rotate(45deg);
 }
 
-/* input:focus + .navbar-toggle-label {
-    outline: 0.25rem solid black;
-    outline-offset: 0.125rem;
-
-    z-index: 99;
-} */
-
-.navbar a {
-    display: block;
-    
-    font-size: 2rem;
-    text-decoration: none;
-    white-space: nowrap;
-    text-transform: uppercase;
-
-    color: inherit;
+.clicked .burger-line:nth-last-of-type(2) {
+    visibility: hidden;
 }
 
-.navbar-toggle:checked ~ ul {
-    transform: scale(1,1);
-    transition: transform var(--animation-slow) ease-out;
+.clicked .burger-line:nth-last-of-type(3) {
+    transform: rotate(-45deg);
 }
 
-.navbar-toggle:checked ~ ul li {
-    transform: scale(1,1);
-    transition: transform var(--animation-slow) ease-out var(--animation-slow);
-}
-
-/* Eksempel på bruk av grid: */
-
-.fun-main {
+.fun main {
+    position: relative;
     display: grid;
     gap: 3rem;
+
+    padding: 2rem 0;
+}
+
+.fun footer {
+    padding: 2rem 10vw;
+    background-color: var(--color-main-accent);
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: row; 
+    }
+
+    .nav-links.show {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
     
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        padding: 2rem;
+
+        background-color: darkgrey;
+    }
+
+    .container p {
+        margin: 1rem 0;
+        max-width: 75ch;
+    }
     
-    /* Denne bestemmer bredden på hver kolonne:  */
+}
+
+@media screen and (min-width: 800px) {
+  
+    .fun main {
+        /* Denne bestemmer bredden på hver kolonne:  */
     grid-template-columns: 3fr 1fr;
     
     /* Denne bestemmer plasseringen:  */
     grid-template-areas: "article aside";
 
-    padding: 5rem 10vw;
-}
+    padding: 4rem 15%;
+    }
 
-.fun-main article {
-    grid-area: article;
-}
-
-.fun-main aside {
-    grid-area: aside;
-}
-
-.fun-main p {
-    margin: 2rem 0;
+    .fun main article {
+        grid-area: article;
+    }
+    
+    .fun main aside {
+        grid-area: aside;
+    }
 }
