@@ -65,7 +65,7 @@ nav {
     text-align: right;
 }
 
-.nav-links.show {
+.mobile-navbar {
     display: flex;
     flex-direction: column;
     width: 100%;

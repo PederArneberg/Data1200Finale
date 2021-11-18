@@ -3,7 +3,7 @@ function navToggle() {
     var navLinks = document.querySelector('.nav-links');
     
     navToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('show');
+        navLinks.classList.toggle('mobile-navbar');
         navToggle.classList.toggle('clicked');
     });
 }
