@@ -21,7 +21,7 @@ body {
     overflow-x: hidden;
 
     display: grid;
-    grid-template-rows: min-content auto min-content;
+    grid-template-rows: auto 1fr auto;
 }
 
 *, *::before, *::after {
@@ -30,11 +30,52 @@ body {
     box-sizing: border-box;
 }
 
+header {
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#skip {
+    height: 0px;
+    overflow: visible;
+    z-index: 99;
+}
+
+#skip>* {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: black;
+    color: whitesmoke;
+    width: fit-content;
+}
+
+#skip :is(a, a:visited) {
+    text-decoration: none;
+    color: inherit;
+}
+
+#banner {
+    max-height: 70vh;
+
+    width: 120%;
+    margin-left: -20%;
+    object-fit: cover;
+    object-position: 50% 35%;
+}
+
 main {
     display: grid;
     gap: 2rem;
+
+    width: 100%;
     
     padding: 4rem 0;
+}
+
+main>* {
     width: 100%;
 }
 
@@ -46,8 +87,12 @@ main img {
     display: flex;
     flex-direction: column;
 
-    background-color: hotpink;
+    /* width: 100%; */
+
     padding: 11.5% 0;
+
+    color: black;
+    background-color: var(--color-main-accent);
 }
 
 .container>* {
@@ -74,11 +119,6 @@ main img {
     box-shadow: 1px 1px 3px black;
 }
 
-.yellow {
-    background-color: var(--color-main-accent);
-    color: rgb(0, 0, 0);
-}
-
 h1 {
     font-size: var(--text-size-large);
 }
@@ -94,11 +134,9 @@ h6 {
 /* Navbar styling starts here */
 
 nav {
-    /* grid-area: header; */
-
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     flex-wrap: wrap;
     row-gap: 2rem;
     padding: 1rem;
@@ -191,7 +229,7 @@ nav {
 /* Footer styling starts here */
 
 footer {
-    /* grid-area: footer; */
+    height: 20vh;
 
     padding: 2rem 10vw;
     background-color: var(--color-main-accent);
@@ -200,10 +238,27 @@ footer {
 @media screen and (min-width: 800px) {
     main {
         padding: 4rem 11.5%;
+
+        /* gap: 2rem; */
+        grid-template-columns: 1fr 1fr;
     }
+
+    main>* {
+        grid-column: 1 / -1;
+    }
+
+    .left {
+        grid-column: 1;
+    }
+
+    .right {
+        grid-column: 2;
+    }
+
 
     nav {
         justify-content: space-around;
+        padding: 2rem;
     }
 
     .nav-toggle {
