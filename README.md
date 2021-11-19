@@ -18,6 +18,9 @@ jeg syns det var vigtig at huske på, og noget jeg kan bruke på siden om access
 Artikkel om bilder:
 https://html.com/attributes/img-srcset/#Individual_File_Sizes
 
+Kilde brukt til styling av tekst:
+https://www.w3.org/TR/WCAG21/#text-spacing
+
 Sjekkliste:
 
 -Riktig struktur på html

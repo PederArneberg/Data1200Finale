@@ -2,9 +2,13 @@
     --animation-fast: 150ms;
     --animation-slow: 300ms;
     --navbar-height: 8vh;
-    --nav-shadow: 0px 3px 3px rgba(0, 0, 0, 0.205);
     --color-main-accent: rgb(248, 213, 72);
     --color-dark-grey: rgb(29, 29, 29);
+    --color-shadow: rgba(0, 0, 0, 0.205);
+    --text-size-default: 16px;
+    --size-multiplier: 1.618;
+    --text-size-medium: calc(var(--text-size-default) * var(--size-multiplier));
+    --text-size-large: calc(var(--text-size-medium) * var(--size-multiplier));
 }
 
 html {
@@ -16,7 +20,7 @@ body {
     min-height: 100vh;
 
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: min-content auto min-content;
     /* grid-template-areas: 
                 "header" 
                 "main" 
@@ -27,6 +31,63 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.fun main {
+    /* grid-area: main; */
+
+    position: relative;
+    display: grid;
+    gap: 3rem;
+    padding: 2rem 0;
+}
+
+.container {
+    background-color: hotpink;
+}
+
+.container-outer {
+    margin: 11.5% 0;
+}
+
+.container-inner {
+    width: 77%;
+    margin: auto;
+}
+
+.container-inner>*:not(:first-child) {
+    margin-top: 2em;
+}
+
+.text p {
+    margin-top: 2em;
+    
+    font-size: 1em;
+    line-height: 1.5;
+    word-spacing: 0.12em;
+    
+    max-width: 75ch;
+}
+
+.shadow {
+    box-shadow: 1px 1px 3px black;
+}
+
+.yellow {
+    background-color: var(--color-main-accent);
+    color: black;
+}
+
+h1 {
+    font-size: var(--text-size-large);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: var(--text-size-medium);
 }
 
 /* Navbar styling starts here */
@@ -40,7 +101,7 @@ nav {
     flex-wrap: wrap;
     row-gap: 2rem;
     padding: 1rem;
-    box-shadow: var(--nav-shadow);
+    box-shadow: 0px 3px 3px var(--color-shadow);
     background-color: var(--color-main-accent);
 }
 
@@ -124,30 +185,6 @@ nav {
 
 .clicked .burger-line:nth-last-of-type(3) {
     transform: rotate(-45deg);
-}
-
-/* Main styling starts here */
-
-.fun main {
-    /* grid-area: main; */
-
-    position: relative;
-    display: grid;
-    gap: 3rem;
-    padding: 2rem 0;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-    padding: 2rem;
-    background-color: darkgrey;
-}
-.container p {
-    margin: 1rem 0;
-    max-width: 75ch;
 }
 
 /* Footer styling starts here */
