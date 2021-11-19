@@ -21,6 +21,9 @@ https://html.com/attributes/img-srcset/#Individual_File_Sizes
 Kilde brukt til styling av tekst:
 https://www.w3.org/TR/WCAG21/#text-spacing
 
+Nettsider til inspirasjon:
+https://www.starbucks.no/
+
 Sjekkliste:
 
 -Riktig struktur på html
@@ -29,5 +32,5 @@ Sjekkliste:
 -Accessibility:
     - God kontrast
     - Lesbar tekst
-    - Funker med skjermleser
+    - Funker med skjermleser (aria hidden)
     - Funker bra med tastatur

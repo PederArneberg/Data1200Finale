@@ -18,13 +18,10 @@ html {
 
 body {
     min-height: 100vh;
+    overflow-x: hidden;
 
     display: grid;
     grid-template-rows: min-content auto min-content;
-    /* grid-template-areas: 
-                "header" 
-                "main" 
-                "footer"; */
 }
 
 *, *::before, *::after {
@@ -33,34 +30,38 @@ body {
     box-sizing: border-box;
 }
 
-.fun main {
-    /* grid-area: main; */
-
-    position: relative;
+main {
     display: grid;
-    gap: 3rem;
-    padding: 2rem 0;
+    gap: 2rem;
+    
+    padding: 4rem 0;
+    width: 100%;
+}
+
+main img {
+    max-width: 100%;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+
     background-color: hotpink;
+    padding: 11.5% 0;
 }
 
-.container-outer {
-    margin: 11.5% 0;
-}
-
-.container-inner {
+.container>* {
     width: 77%;
-    margin: auto;
+    margin-left: 11.5%;
 }
 
-.container-inner>*:not(:first-child) {
+.container>*:not(:first-child) {
     margin-top: 2em;
 }
 
 .text p {
     margin-top: 2em;
+    margin-right: auto;
     
     font-size: 1em;
     line-height: 1.5;
@@ -75,7 +76,7 @@ body {
 
 .yellow {
     background-color: var(--color-main-accent);
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 h1 {
@@ -189,7 +190,7 @@ nav {
 
 /* Footer styling starts here */
 
-.fun footer {
+footer {
     /* grid-area: footer; */
 
     padding: 2rem 10vw;
@@ -197,18 +198,8 @@ nav {
 }
 
 @media screen and (min-width: 800px) {
-    .fun main {
-        /* Denne bestemmer bredden på hver kolonne:  */
-        grid-template-columns: 3fr 1fr;
-        /* Denne bestemmer plasseringen:  */
-        grid-template-areas: "article aside";
-        padding: 4rem 15%;
-    }
-    .fun main article {
-        grid-area: article;
-    }
-    .fun main aside {
-        grid-area: aside;
+    main {
+        padding: 4rem 11.5%;
     }
 
     nav {
