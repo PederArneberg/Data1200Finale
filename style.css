@@ -35,6 +35,13 @@ body {
     box-sizing: border-box;
 }
 
+:focus{
+    outline-color: rgb(95, 91, 92);
+    outline-offset: 0.2rem;
+    outline-width: 00.15rem;
+}
+
+
 header {
     position: relative;
     overflow: hidden;
