@@ -1,11 +1,19 @@
 :root {
     --animation-fast: 150ms;
     --animation-slow: 300ms;
-    --navbar-height: 8vh;
     --main-gap: 2rem;
-    --color-main-accent: rgb(248, 213, 72);
-    --color-dark-grey: rgb(29, 29, 29);
-    --color-shadow: rgba(0, 0, 0, 0.205);
+
+    /* --color-dark-accent: rgb(248, 213, 72); */
+    --color-dark-accent: #DEA800;
+    --color-light-accent: #EEEC00;
+    --color-white: #F2F2F2;
+    --color-light-gray: #A8C0CE;
+    --color-dark-gray: #768591;
+    --color-black: #0D0D0D;
+    --color-gradient: linear-gradient(180deg, hsl(0, 0%, 80%) 0%, hsl(0, 0%, 50%) 100%);
+    --color-main-background: var(--color-dark-gray);
+    --color-shadow: rgba(0, 0, 0, 0.200);
+
     --text-size-default: 16px;
     --size-multiplier: 1.618;
     --text-size-small: calc(var(--text-size-default) * var(--size-multiplier));
@@ -26,7 +34,9 @@ body {
     overflow-x: hidden;
 
 
-    background-image: linear-gradient(180deg, hsl(0, 0%, 100%) 0%, hsl(225, 19%, 67%) 100%);
+    background-color: var(--color-main-background);
+    background-image: var(--color-gradient);
+    background-blend-mode: luminosity;
 }
 
 *, *::before, *::after {
@@ -44,7 +54,6 @@ body {
 
 header {
     position: relative;
-    overflow: hidden;
 
     display: flex;
     flex-direction: column;
@@ -58,9 +67,10 @@ nav {
     align-items: center;
     flex-wrap: wrap;
     row-gap: 2rem;
+    
     padding: 1rem;
+
     box-shadow: 0px 3px 3px var(--color-shadow);
-    background-color: var(--color-main-accent);
 }
 
 .nav-toggle {
@@ -68,6 +78,7 @@ nav {
     gap: 1rem;
     align-items: center;
     border: none;
+    color: inherit;
     background-color: inherit;
     font: inherit;
     cursor: pointer;
@@ -103,7 +114,7 @@ nav {
 .nav-links a {
     text-decoration: none;
     text-transform: uppercase;
-    color: black;
+    color: inherit;
 }
 
 .hamburger-icon {
@@ -176,8 +187,6 @@ nav {
 header h1 {
     font-size: var(--text-size-large);
     
-    color: white;
-    background-color: black;
     text-align: center;
     padding: 0.5em;
 }
@@ -200,17 +209,11 @@ main img {
 }
 
 .container {
-    /* width: 100%; */
+    /* padding: 11.5%; */
+    padding: 10%;
 
-    padding: 11.5% 0;
-
-    color: black;
-    background-color: var(--color-main-accent);
-}
-
-.container>* {
-    width: 77%;
-    margin-left: 11.5%;
+    color: var(--color-black);
+    background-color: var(--color-white);
 }
 
 .container>*:not(:first-child) {
@@ -220,14 +223,12 @@ main img {
 
 .text p {
     margin-top: 2em;
-    margin-right: auto;
     
     max-width: 75ch;
 
     font-size: 1em;
     line-height: 1.5;
     word-spacing: 0.12em;
-    
 }
 
 /* 
@@ -277,7 +278,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 }
 
 .shadow {
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.200);
+    box-shadow: 1px 3px 3px var(--color-shadow);
 }
 
 h1 {
@@ -292,6 +293,22 @@ h6 {
     font-size: var(--text-size-medium);
 }
 
+/* Color styling */
+
+.dark-background {
+    color: var(--color-black);
+    background-color: var(--color-dark-accent);
+}
+
+.light-background {
+    color: var(--color-black);
+    background-color: var(--color-light-accent);
+}
+
+.test {
+    color: var(--color-black);
+    background-color: var(--color-light-gray);
+}
 
 
 /* Footer styling starts here */
@@ -299,8 +316,8 @@ h6 {
 footer {
     height: 20vh;
 
-    padding: 2rem 10vw;
-    background-color: var(--color-main-accent);
+    padding: 2rem;
+    background-color: var(--color-dark-accent);
 }
 
 @media screen and (min-width: 800px) {
@@ -347,7 +364,7 @@ footer {
     }
 
     main {
-        padding: 2rem;
+        padding: 2rem 11.5%;
     }
 
 }
