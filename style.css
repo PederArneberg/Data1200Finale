@@ -199,8 +199,7 @@ main {
 
     width: 100%;
     
-    margin-top: 20vh;
-    padding: 4rem 0;
+    margin-top: 5rem;
 }
 
 main>* {
@@ -335,12 +334,11 @@ footer {
     
     transition: all ease-out 1s;
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.8);
-    border-radius: 100%;
 }
 
 #fun-art div:hover {
     /* background-color: yellow; */
-    transform: scale(200%) rotate(-360deg);
+    transform: scale(200%) rotate(-180deg);
     
     background-color: var(--color-white);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.2);
@@ -351,10 +349,6 @@ footer {
 @media screen and (min-width: 800px) {
 
     main {
-        --main-gap: 2rem;
-
-        padding: var(--main-gap) 0;
-
         grid-template-columns: 1fr 1fr;
     }
 
