@@ -11,38 +11,33 @@
 
 <body>
     <header>
-    <nav>
-        <div class="logo">
-            <h2>The NAV Bar</h2>
-        </div>
-        </label>
-        <button class="nav-toggle" id="nav-toggle" title="Toggle navigation list">
-            Menu
-            <div class="hamburger-icon">
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
+        <nav id="navbar">
+            <div class="logo">
+                <h2>#REFLECTION</h2>
             </div>
-        </button>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li class="active"><a href="reflection.html">Reflection</a></li>
-            <li><a href="accessibility.html">Accesibility</a></li>
-            <li><a href="technologyandsociety.html">Topical Information</a></li>
-            <li><a href="fun.html">Fun</a></li>
-        </ul>
-
-        <script src="script.js"></script>
-    </nav>
-
-<div id="header-background"></div>
-<h1>Reflection Essay</h1>
-</header>
+            <button class="nav-toggle" id="nav-toggle" title="Toggle navigation list">
+                Menu
+                <span class="hamburger-icon">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li  class="active"><a href="reflection.html">Reflection</a></li>
+                <li><a href="accessibility.html">Accesibility</a></li>
+                <li><a href="technologyandsociety.html">Topical Information</a></li>
+                <li><a href="fun.html">Fun</a></li>
+            </ul>
+            
+            <script src="script.js"></script>
+        </nav>
+    </header>
     
-
     <main id="maincontent">
-        <article class="frontpage container text left shadow">
-
+        <article class="container text left shadow">
+        
             <h1>From Pupil to Student</h1>
             <p>
                 There are certain challenges in the transition from being a pupil
@@ -68,12 +63,18 @@
 
         </article>
 
-        <article class="frontpage container text right shadow">
+        <article class="container text right shadow">
             
 
-            <img id="library" srcset="Img/library-2400.jpg 2400w, Img/library-1920.jpg 1920w, Img/library.jpg 640w" 
-                src="Img/library-640.jpg"
-                alt="Student sitting at library">
+            <img id="library" 
+            srcset="Img/library-2400.jpg 2400w, 
+            Img/library-1920.jpg 1920w, 
+            Img/library.jpg 640w" 
+            sizes="(max-width: 2000px ) 2400vw,
+            (max-width: 1300px ) 1920vw,
+            (max-width: 900px ) 640vw"
+            src="Img/library-640.jpg"
+            alt="Student sitting at library">
 
             <p>
                 Another challenge in the transition from being a pupil to a student,
@@ -88,12 +89,18 @@
             </p>
         </article>
 
-        <article class="frontpage container text shadow">
+        <article class="container text shadow">
             
 
-            <img id="lecture" srcset="Img/lecture-2400.jpg 2400w, Img/lecture-1920.jpg 1920w, Img/lecture-640 640w" 
+            <img id="lecture" 
+            srcset="Img/lecture-2400.jpg 2400w, 
+            Img/lecture-1920.jpg 1920w, 
+            Img/lecture-640 640w"
+            sizes="(max-width: 2000px ) 2400vw,
+            (max-width: 1300px ) 1920vw,
+            (max-width: 900px ) 640vw" 
             src="Img/lecture-640.jpg"
-                alt="Students in a lecture hall">
+            alt="Students in a lecture hall">
             
                 <h2>A Social Challenge</h2>
 
@@ -107,7 +114,7 @@
                 friends because its often not a «classroom» environment, instead it
                 could be a lecture hall with 100-400 students who all sits quiet in 
                 their chair and listens to a professor, taking notes. Therefore the 
-                students have need to put a lot more effort into the process of 
+                students need to put a lot more effort into the process of 
                 getting friends than the pupils. However the universities and other 
                 higher educational institutions often offer a broad range of 
                 activities or social groups that the student can be a member of. 

@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header>
-        <nav class="dark-background">
+<body id="index">
+    <!-- <header>
+        <nav class="navbar">
             <div class="logo">
                 <h2>The NAV Bar</h2>
             </div>
@@ -33,16 +33,55 @@
             <script src="script.js"></script>
         </nav>
 
+        <div id="title-container">
+            <span id="icon">&lt/&gt</span>
+            <h1>Welcome to the FUN page</h1>
+        </div>
+
         <div id="skip">
             <div>
                 <a href="#maincontent">Skip to main content</a>
             </div>
         </div>
 
-        <img id="banner" srcset="Img/banner-2400.jpg 2400w, Img/banner-1920.jpg 1920w, Img/banner-640.jpg 640w" 
-            src="Img/banner-640.jpg"
-            alt="Banner with the words Everyone can code">
+        <img id="banner" 
+        srcset="Img/banner-2400.jpg 2400w, 
+        Img/banner-1920.jpg 1920w, 
+        Img/banner-640.jpg 640w"
+        sizes="(max-width: 2000px ) 2400vw,
+            (max-width: 1300px ) 1920vw,
+            (max-width: 900px ) 640vw" 
+        src="Img/banner-640.jpg"
+        alt="Banner with the words Everyone can code">
         <h1 class="light-background">First time at OsloMet</h1>
+    </header> -->
+    <header>
+        <nav id="navbar">
+            <div class="logo">
+                <h2>#HOME</h2>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" title="Toggle navigation list">
+                Menu
+                <span class="hamburger-icon">
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                    <span class="burger-line"></span>
+                </span>
+            </button>
+            <ul class="nav-links">
+                <li  class="active"><a href="index.html">Home</a></li>
+                <li><a href="reflection.html">Reflection</a></li>
+                <li><a href="accessibility.html">Accesibility</a></li>
+                <li><a href="technologyandsociety.html">Topical Information</a></li>
+                <li><a href="fun.html">Fun</a></li>
+            </ul>
+            
+            <script src="script.js"></script>
+        </nav>
+        <div id="title-container">
+            <span id="icon">&#60&#47&#62</span>
+            <h1>Being a first year student</h1>
+        </div>
     </header>
 
     <main id="maincontent">
@@ -58,9 +97,15 @@
         <article class="container text right shadow">
             
 
-            <img id="frustration" srcset="Img/frustration-2400.jpg 2400w, Img/frustration-1920.jpg 1920w, Img/frustration.jpg 640w" 
-                src="Img/frustration-640.jpg"
-                alt="Woman sitting with laptop, hands to the head in frustration">
+            <img id="frustration" 
+            srcset="Img/frustration-2400.jpg 2400w, 
+            Img/frustration-1920.jpg 1920w, 
+            Img/frustration.jpg 640w" 
+            sizes="(max-width: 2000px ) 2400vw,
+            (max-width: 1300px ) 1920vw,
+            (max-width: 900px ) 640vw"
+            src="Img/frustration-640.jpg"
+            alt="Woman sitting with laptop, hands to the head in frustration">
 
                 <h2>The first frustration</h2>
 
@@ -75,9 +120,15 @@
         <article class="container text shadow">
             
 
-            <img id="gruppe" srcset="Img/group-2400.jpg 2400w, Img/group-1920.jpg 1920w, Img/group-640 640w" 
+            <img id="gruppe" 
+            srcset="Img/group-2400.jpg 2400w, 
+            Img/group-1920.jpg 1920w, 
+            Img/group-640 640w" 
+            sizes="(max-width: 2000px ) 2400vw,
+            (max-width: 1300px ) 1920vw,
+            (max-width: 900px ) 640vw"
             src="Img/group-640.jpg"
-                alt="A group of studens sitter together around a table working on their laptops">
+            alt="A group of studens sitter together around a table working on their laptops">
             
                 <h2>A helping hand</h2>
 
