@@ -74,10 +74,10 @@ nav {
 
 .nav-toggle {
     display: flex;
-    gap: 1rem;
+    gap: 0.25rem;
     align-items: center;
     border: none;
-    color: inherit;
+    color: black;
     background-color: inherit;
     font: inherit;
     cursor: pointer;
@@ -94,7 +94,7 @@ nav {
     text-align: right;
 }
 
-.mobile-navbar {
+.nav-links.navbar-expanded {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -182,6 +182,65 @@ nav {
     object-fit: cover;
     object-position: 50% 35%;
 }
+
+/* fun styling */
+
+.fun header {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    height: min(80vw, 100vh);
+    
+    background-color: hsl(0, 0%, 80%);
+    background-image: url(Img/banner-1920.jpg);
+    background-blend-mode: multiply;
+    background-position: center;
+    background-position: 70% 25%;
+    background-size: cover;
+}
+
+.fun nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    grid-row: 1;
+
+    background-color: none;
+    box-shadow: none;
+
+    color: white;
+    border-color: white;
+    background-color: hsla(0, 0%, 5%, 0.75);
+    backdrop-filter: blur(5px);
+}
+
+.fun .nav-toggle {
+    padding: 0.7rem 1rem;
+    border-radius: 10rem;
+    color: black;
+    background-color: white;
+}
+
+.fun .nav-links .active {
+    border-color: white;
+}
+
+.fun header h1 {
+    grid-row: -1;
+
+    color: white;
+    /* background-color: #0d0d0dbe; */
+    text-shadow: 0px 0px 50px black;
+    padding: 0;
+    padding-bottom: 1em;
+}
+
+.fun footer {
+    color: white;
+    background-color: #0D0D0D;
+}
+
 
 header h1 {
     font-size: var(--text-size-large);
@@ -348,6 +407,7 @@ footer {
         display: none;
     }
 
+    .nav-links.navbar-expanded,
     .nav-links {
         display: flex;
         flex-direction: row;
