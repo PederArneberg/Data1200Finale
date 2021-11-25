@@ -187,53 +187,59 @@ nav {
 
 .fun header {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: min-content 1fr;
+    align-items: center;
+    justify-items: center;
 
     height: min(80vw, 100vh);
+    min-height: fit-content;
+    overflow: hidden;
     
-    background-color: hsl(0, 0%, 80%);
-    background-image: url(Img/banner-1920.jpg);
+    color: #383838;
+    background-color: #ECECEC;
+    /* background-image: url(Img/banner-1920.jpg);
     background-blend-mode: multiply;
     background-position: center;
     background-position: 70% 25%;
-    background-size: cover;
+    background-size: cover; */
 }
 
 .fun nav {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    grid-row: 1;
+    /* position: fixed; */
+    width: 100%;
 
-    background-color: none;
+    background-color: inherit;
     box-shadow: none;
 
-    color: white;
-    border-color: white;
-    background-color: hsla(0, 0%, 5%, 0.75);
-    backdrop-filter: blur(5px);
+    color: inherit;
+    /* background-color: hsla(0, 0%, 5%, 0.75); */
+    /* backdrop-filter: blur(5px); */
 }
 
 .fun .nav-toggle {
     padding: 0.7rem 1rem;
     border-radius: 10rem;
-    color: black;
-    background-color: white;
+    color: inherit;
+    /* background-color: white; */
 }
 
 .fun .nav-links .active {
-    border-color: white;
+    border-color: black;
 }
 
-.fun header h1 {
-    grid-row: -1;
+.fun #title-container {
+    vertical-align: center;
+    text-align: center;
+    padding-top: auto;
+    padding-bottom: auto;
+    padding: 1em;
 
-    color: white;
-    /* background-color: #0d0d0dbe; */
-    text-shadow: 0px 0px 50px black;
-    padding: 0;
-    padding-bottom: 1em;
+    color: inherit;
+}
+
+.fun #icon {
+    color: #009063;
+    font-size: 200px;
 }
 
 .fun footer {
