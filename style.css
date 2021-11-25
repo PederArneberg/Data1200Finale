@@ -3,15 +3,12 @@
     --animation-slow: 300ms;
     --main-gap: 2rem;
 
-    /* --color-dark-accent: rgb(248, 213, 72); */
-    --color-dark-accent: #DEA800;
-    --color-light-accent: #EEEC00;
-    --color-white: #F2F2F2;
-    --color-light-gray: #A8C0CE;
-    --color-dark-gray: #768591;
-    --color-black: #0D0D0D;
+    --color-accent: #009063;
+    --color-white: #ECECEC;
+    --color-black: #383838;
+    --color-main-background: white;
+
     --color-gradient: linear-gradient(180deg, hsl(0, 0%, 80%) 0%, hsl(0, 0%, 50%) 100%);
-    --color-main-background: var(--color-dark-gray);
     --color-shadow: rgba(0, 0, 0, 0.200);
 
     --text-size-default: 16px;
@@ -56,20 +53,33 @@ header {
 
     display: flex;
     flex-direction: column;
+
+    color: #383838;
+    background-color: #ECECEC;
 }
+
+#index header {
+    height: 100vh;
+}
+
 
 /* Navbar styling starts here */
 
 nav {
+    position: fixed;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     row-gap: 2rem;
     
+    width: 100%;
     padding: 1rem;
 
-    box-shadow: 0px 3px 3px var(--color-shadow);
+    color: inherit;
+    background-color: inherit;
+    box-shadow: 0px 3px 10px #00000063;
 }
 
 .nav-toggle {
@@ -82,6 +92,8 @@ nav {
     font: inherit;
     cursor: pointer;
     text-align: center;
+
+    color: inherit;
 }
 
 .nav-links {
@@ -98,6 +110,10 @@ nav {
     display: flex;
     flex-direction: column;
     width: 100%;
+}
+
+.nav-links .active {
+    border-color: black;
 }
 
 .nav-links li {
@@ -155,81 +171,6 @@ nav {
     transform: rotate(-45deg);
 }
 
-/* #skip {
-    height: 0px;
-    overflow: visible;
-    z-index: 99;
-}
-
-#skip>* {
-    margin: 1rem;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.750);
-    color: whitesmoke;
-    width: fit-content;
-}
-
-#skip :is(a, a:visited) {
-    text-decoration: none;
-    color: inherit;
-}
-
-#banner {
-    max-height: 70vh;
-
-    width: 120%;
-    margin-left: -20%;
-    object-fit: cover;
-    object-position: 50% 35%;
-} */
-
-/* fun styling */
-
-header {
-    /* display: grid;
-    grid-template-rows: min-content 1fr;
-    align-items: center;
-    justify-items: center;
-    min-height: fit-content; */
-
-    /* overflow: hidden; */
-    
-    color: #383838;
-    background-color: #ECECEC;
-    /* background-image: url(Img/banner-1920.jpg);
-    background-blend-mode: multiply;
-    background-position: center;
-    background-position: 70% 25%;
-    background-size: cover; */
-}
-
-#index header {
-    height: 100vh;
-}
-
-nav {
-    position: fixed;
-    width: 100%;
-
-    background-color: inherit;
-    box-shadow: 0px 0px 10px #00000063;
-
-    color: inherit;
-    /* background-color: hsla(0, 0%, 5%, 0.75); */
-    /* backdrop-filter: blur(5px); */
-}
-
-.nav-toggle {
-    padding: 0.7rem 1rem;
-    border-radius: 10rem;
-    color: inherit;
-    /* background-color: white; */
-}
-
-.nav-links .active {
-    border-color: black;
-}
-
 #title-container {
     display: grid;
     place-content: center;
@@ -240,10 +181,6 @@ nav {
 
     text-align: center;
     color: inherit;
-}
-
-main {
-    margin-top: 20vh;
 }
 
 #icon {
@@ -270,6 +207,7 @@ main {
 
     width: 100%;
     
+    margin-top: 20vh;
     padding: 4rem 0;
 }
 
