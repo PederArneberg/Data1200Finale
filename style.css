@@ -176,11 +176,11 @@ nav {
     padding: 2rem;
     margin-top: 10vh;
 
-    text-align: center;
     color: inherit;
-
     background-color: inherit;
-    z-index: 1;
+    box-shadow: 1px 3px 3px var(--color-shadow);
+
+    text-align: center;
 }
 
 #icon {
@@ -278,10 +278,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     bottom: -1em;
     
     background-color: inherit;
-}
-
-.shadow {
-    box-shadow: 1px 3px 3px var(--color-shadow);
 }
 
 h1 {
