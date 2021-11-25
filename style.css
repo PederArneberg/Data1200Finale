@@ -15,10 +15,9 @@
     --color-shadow: rgba(0, 0, 0, 0.200);
 
     --text-size-default: 16px;
-    --size-multiplier: 1.618;
-    --text-size-small: calc(var(--text-size-default) * var(--size-multiplier));
-    --text-size-medium: calc(var(--text-size-small) * var(--size-multiplier));
-    --text-size-large: calc(var(--text-size-medium) * var(--size-multiplier));
+    --heading-size-multiplier: 1;
+    --text-size-medium: calc(26px * var(--heading-size-multiplier));;
+    --text-size-large: calc(42px * var(--heading-size-multiplier));
 }
 
 html {
@@ -357,6 +356,11 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
+    :root {
+        --heading-size-multiplier: 1.618;
+    }
+
+
     html {
         font-size: 20px;
     }
