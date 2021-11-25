@@ -314,8 +314,6 @@ h6 {
 /* Footer styling starts here */
 
 footer {
-    height: 20vh;
-
     padding: 2rem;
     background-color: var(--color-dark-accent);
 }
