@@ -391,7 +391,6 @@ footer li {
     aspect-ratio: 1;
 
     background-color: var(--color-accent);
-    /* background-color: transparent;  */
     
     transition: all 1s ease-out 10s;
 
@@ -458,7 +457,7 @@ It works in combination with onclick="" on the squares */
 }
 
 @media screen and (min-width: 1200px) {
-    
+
     :root {
         --navbar-height: 10vh;
         --main-gap: 2rem;
