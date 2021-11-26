@@ -63,7 +63,7 @@ h6 {
 
 h1 {
     font-size: var(--text-size-large);
-    padding: 0 1em;
+    padding: 1em 1em 0.5em;
 }
 
 
@@ -244,7 +244,7 @@ main img {
 }
 
 .container {
-    padding: min(11.5%, 6rem);
+    padding: 11.5%;
 
     color: var(--color-black);
     background-color: var(--color-white);
@@ -448,7 +448,7 @@ footer li {
 
 
     html {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     main {
@@ -461,6 +461,10 @@ footer li {
 }
 
 @media screen and (min-width: 1600px) {
+
+    html {
+        font-size: 20px;
+    }
 
     main {
         padding: var(--main-gap) 11.5%;
