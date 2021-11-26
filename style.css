@@ -1,3 +1,6 @@
+/* Import from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
 :root {
     --animation-fast: 150ms;
     --animation-slow: 300ms;
@@ -12,14 +15,16 @@
 
     --color-shadow: hsla(0, 0%, 0%, 0.2);
 
-    --heading-size-multiplier: 1;
-    --text-size-medium: calc(26px * var(--heading-size-multiplier));;
-    --text-size-large: calc(42px * var(--heading-size-multiplier));
+    --heading-size-multiplier: 1.4;
+    --text-size-small: calc(1rem * var(--heading-size-multiplier));
+    --text-size-medium: calc(var(--text-size-small) * var(--heading-size-multiplier));
+    --text-size-large: calc(var(--text-size-medium) * var(--heading-size-multiplier));
 }
 
 html {
     font-size: 16px;
-    font-family: sans-serif;
+    font-family: Inter, sans-serif;
+    font-weight: 400;
 }
 
 body {
@@ -43,6 +48,22 @@ body {
     outline-color: rgb(95, 91, 92);
     outline-offset: 0.2rem;
     outline-width: 00.15rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 700;
+    font-size: var(--text-size-medium);
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: var(--text-size-large);
+    padding: 0 1em;
 }
 
 
@@ -73,8 +94,6 @@ nav {
     
     width: 100%;
 
-    padding: 0 1rem;
-
     color: inherit;
     background-color: inherit;
     box-shadow: 0px 3px 3px hsla(0, 0%, 0%, 0.1);
@@ -82,11 +101,17 @@ nav {
 
 nav>* {
     min-height: var(--navbar-height);
+    margin: 0 1rem;;
 }
 
 .logo {
     display: grid;
     place-content: center;
+}
+
+.logo h2 {
+    font-size: var(--text-size-small);
+    font-weight: 500;
 }
 
 .navbar-expanded {
@@ -191,14 +216,14 @@ nav>* {
     text-align: center;
 }
 
-#icon {
+#title-icon {
     color: var(--color-accent);
     font-size: min(200px, 40vw);
 }
 
 #title-container h1 {
     text-align: center;
-    padding: 0 0.5em;
+    padding-top: 0;
 }
 
 main {
@@ -214,11 +239,12 @@ main {
 }
 
 main img {
+    display: block;
     max-width: 100%;
 }
 
 .container {
-    padding: 10%;
+    padding: 11.5%;
 
     color: var(--color-black);
     background-color: var(--color-white);
@@ -285,25 +311,16 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
     background-color: inherit;
 }
 
-h1 {
-    font-size: var(--text-size-large);
-    margin: 0 auto;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: var(--text-size-medium);
-}
-
 /* Footer styling starts here */
 
 footer {
-    padding: 2rem;
+    padding: 1rem 4rem;
     color: var(--color-black);
     background-color: var(--color-white);
+}
+
+footer li {
+    margin: 0.5rem 0;
 }
 
 .fun main {
@@ -372,6 +389,9 @@ footer {
 }
 
 @media screen and (min-width: 800px) {
+    :root {
+        --heading-size-multiplier: 1.6;
+    }
 
     nav {
         justify-content: space-around;
@@ -417,7 +437,6 @@ footer {
 
 @media screen and (min-width: 1200px) {
     :root {
-        --heading-size-multiplier: 1.618;
         --navbar-height: 10vh;
         --main-gap: 2rem;
     }
