@@ -64,6 +64,7 @@ h1 {
     padding: 1em 1em 0.5em;
 }
 
+/* Header styling starts here */
 
 header {
     display: flex;
@@ -78,6 +79,8 @@ header {
 #index header {
     height: 100vh;
 }
+
+/* Nav styling starts here */
 
 nav {
     position: fixed;
@@ -201,6 +204,8 @@ nav>* {
 .navbar-expanded .burger-line:nth-last-of-type(3) {
     transform: rotate(-45deg);
 }
+
+/* Nav styling ends here */
 
 #title-container {
     display: grid;
@@ -351,6 +356,10 @@ footer li {
     pointer-events: none;
 
     width: 100%;
+}
+
+.overlay>* {
+    padding: 0;
 }
 
 #fun-art{
