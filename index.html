@@ -3,60 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The welcome page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body id="index">
-    <!-- <header>
-        <nav class="navbar">
-            <div class="logo">
-                <h2>The NAV Bar</h2>
-            </div>
-            <button class="nav-toggle" id="nav-toggle" title="Toggle navigation list">
-                Menu
-                <div class="hamburger-icon">
-                    <div class="burger-line"></div>
-                    <div class="burger-line"></div>
-                    <div class="burger-line"></div>
-                </div>
-            </button>
-            <ul class="nav-links">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="reflection.html">Reflection</a></li>
-                <li><a href="accessibility.html">Accesibility</a></li>
-                <li><a href="technologyandsociety.html">Topical Information</a></li>
-                <li><a href="fun.html">Fun</a></li>
-            </ul>
-
-            <script src="script.js"></script>
-        </nav>
-
-        <div id="title-container">
-            <span id="icon">&lt/&gt</span>
-            <h1>Welcome to the FUN page</h1>
-        </div>
-
-        <div id="skip">
-            <div>
-                <a href="#maincontent">Skip to main content</a>
-            </div>
-        </div>
-
-        <img id="banner" 
-        srcset="Img/banner-2400.jpg 2400w, 
-        Img/banner-1920.jpg 1920w, 
-        Img/banner-640.jpg 640w"
-        sizes="(max-width: 2000px ) 2400vw,
-            (max-width: 1300px ) 1920vw,
-            (max-width: 900px ) 640vw" 
-        src="Img/banner-640.jpg"
-        alt="Banner with the words Everyone can code">
-        <h1 class="light-background">First time at OsloMet</h1>
-    </header> -->
     <header>
-        <nav id="navbar">
+        <nav class="navbar">
             <div class="logo">
                 <h2>#HOME</h2>
             </div>
@@ -69,24 +24,24 @@
                 </span>
             </button>
             <ul class="nav-links">
-                <li  class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
                 <li><a href="reflection.html">Reflection</a></li>
-                <li><a href="accessibility.html">Accesibility</a></li>
+                <li><a href="accessibility.html">Accessibility</a></li>
                 <li><a href="technologyandsociety.html">Topical Information</a></li>
                 <li><a href="fun.html">Fun</a></li>
             </ul>
-            
+
             <script src="script.js"></script>
         </nav>
         <div id="title-container">
-            <span id="icon">&#60;&#47;&#62;</span>
+            <span id="title-icon" aria-hidden="true">&#60;&#47;&#62;</span>
             <h1>Being a first year student</h1>
         </div>
     </header>
 
     <main id="maincontent">
         <article class="container text left">
-            <h2>Preschool expectation</h2>
+            <h2 tabindex="0">Preschool expectation</h2>
             <p>
                 We were looking forward to beginning at OsloMet! And we were quite excited about learning new stuff,
                 and getting in the field of coding, calculating, programming and ofcourse meeting our fellow students!
@@ -95,53 +50,59 @@
         </article>
 
         <article class="container text right">
-            
 
-            <img id="frustration" 
-            srcset="Img/frustration-2400.jpg 2400w, 
+            <h2  tabindex="0">The first frustration</h2>
+
+            <img id="frustration" srcset="Img/frustration-2400.jpg 2400w, 
             Img/frustration-1920.jpg 1920w, 
-            Img/frustration.jpg 640w" 
-            sizes="(max-width: 2000px ) 2400vw,
+            Img/frustration.jpg 640w" sizes="(max-width: 2000px ) 2400vw,
             (max-width: 1300px ) 1920vw,
-            (max-width: 900px ) 640vw"
-            src="Img/frustration-640.jpg"
-            alt="Woman sitting with laptop, hands to the head in frustration">
+            (max-width: 900px ) 640vw" src="Img/frustration-640.jpg"
+                alt="Woman sitting with laptop, hands to the head in frustration">
 
-                <h2>The first frustration</h2>
 
             <p>
-            After the first couple of weeks, we understood that coding was a lot of fun! All the endless possibilities
-            both within Java and HTML/CSS, we felt one could have control over how programs work and how one could build
-            awesome websides. But we also discovered that a tiny misspelling of a word or simply a colon could ruin everything!
-            We spent a lot of time just looking for a mistake, without finding it at all!
+                After the first couple of weeks, we understood that coding was a lot of fun! All the endless
+                possibilities
+                both within Java and HTML/CSS, we felt one could have control over how programs work and how one could
+                build
+                awesome websides. But we also discovered that a tiny misspelling of a word or simply a colon could ruin
+                everything!
+                We spent a lot of time just looking for a mistake, without finding it at all!
             </p>
         </article>
 
         <article class="container text">
-            
 
-            <img id="gruppe" 
-            srcset="Img/group-2400.jpg 2400w, 
+            <h2  tabindex="0">A helping hand</h2>
+
+            <img id="gruppe" srcset="Img/group-2400.jpg 2400w, 
             Img/group-1920.jpg 1920w, 
-            Img/group-640 640w" 
-            sizes="(max-width: 2000px ) 2400vw,
+            Img/group-640 640w" sizes="(max-width: 2000px ) 2400vw,
             (max-width: 1300px ) 1920vw,
-            (max-width: 900px ) 640vw"
-            src="Img/group-640.jpg"
-            alt="A group of studens sitter together around a table working on their laptops">
-            
-                <h2>A helping hand</h2>
+            (max-width: 900px ) 640vw" src="Img/group-640.jpg"
+                alt="A group of studens sitter together around a table working on their laptops">
+
 
             <p>
-            Luckely, after the first couple of times with frustration, there was a bit of releif! We were given help from TA's
-            and we were surposed to do assigments in small groups. And as we descoved sometimes it's just a semicolon 
-            holding you back, and then it's nice to have more then one set of eyes looking through the code. 
+                Luckely, after the first couple of times with frustration, there was a bit of releif! We were given help
+                from TA's
+                and we were surposed to do assigments in small groups. And as we descoved sometimes it's just a
+                semicolon
+                holding you back, and then it's nice to have more then one set of eyes looking through the code.
             </p>
         </article>
 
     </main>
     <footer>
-        <p>All pictures are taken from <a href="https://unsplash.com" target="_blank">Unsplash</a></p>
+        <ul>
+            <li>
+                <p>All pictures are free to use under the <a href="https://unsplash.com/license" target="_blank">Unsplash License</a></p>
+            </li>
+            <li>
+                <p>All fonts are free to use under the Open Font License and embeded from <a href="https://fonts.google.com/specimen/Inter#license" target="_blank">Google Fonts</a></p>
+            </li>
+        </ul>
     </footer>
 </body>
 

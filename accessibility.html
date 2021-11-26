@@ -3,13 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About accessibility</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
-        <nav id="navbar">
+        <nav class="navbar">
             <div class="logo">
                 <h2>#ACCESSIBILITY</h2>
             </div>
@@ -24,7 +26,7 @@
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="reflection.html">Reflection</a></li>
-                <li class="active"><a href="accessibility.html">Accesibility</a></li>
+                <li class="active"><a href="accessibility.html">Accessibility</a></li>
                 <li><a href="technologyandsociety.html">Topical Information</a></li>
                 <li><a href="fun.html">Fun</a></li>
             </ul>
@@ -42,45 +44,64 @@
                 different tools to
                 help us understand how a webpage become accessible to most people. We used WAVE a lot to scan the
                 webpage to make
-                sure the contrast and structure were satisfying(<a href="https://wave.webaim.org/" target="_blank">wave
+                sure the contrast and structure were satisfying (<a href="https://wave.webaim.org/" target="_blank">wave
                     webpage</a>).
+            </p>
+            <p>
                 One of the things we had in mind when thinking about asseccibility, was to navigate the page by keybord.
                 And while navigating around we found that the focus was to invisible, so we made the focus outline-width
                 and outline-offset lager. Here an example off a before and after the focus was chanced.
-                <img class="inline" src="Img/without-focus.png" alt="Before the focus was changed">
-                <img class="inline" src="Img/with-focus.png" alt="After the focus was changed">
+            </p>
 
-                When it comes to links we tried to give every link a short and precise name. We also made every extern link
+            <img src="Img/without-focus.png" alt="Before the focus was changed">
+            <img src="Img/with-focus.png" alt="After the focus was changed">
+
+            <p>
+                When it comes to links we tried to give every link a short and precise name. We also made every extern
+                link
                 open in a new window. Except from the ones linking around our own page, like the ones in the nav bar.
-                We ran our code in the W3C html<a href="https://validator.w3.org/"
-                    target="_blank"> validator</a>
+            </p>
+            <p>
+                We ran our code in the W3C html<a href="https://validator.w3.org/" target="_blank"> validator</a>
                 and found that, even after working with the img tag, there were still some problems. We fixed the issues W3C
-                suggested
-                in the index page. We wanted the pictures to load according to the users internet speed, and the
+                suggested in the index page.
+            </p> 
+            <p>
+                We wanted the pictures to load according to the users internet speed, and the
                 size of the screen.
                 We used all the attributes for this in the index page, but please notice that the pictures on the other
                 pages may vary
                 from this structure. For example on this page we have some small example off our code, and these
                 pictures are not ment to
                 be in any high resolution but is ment to be small and just for illustration.
-                <img class= "inline" src="Img/html-validator.png" alt="A screenshot from html validator">
             </p>
+            <img class="inline" src="Img/html-validator.png" alt="A screenshot from html validator">
         </article>
 
         <article class="container text">
             <h2>Essential to some - nice for everyone</h2>
 
-            <p>For people with disabilities it's essential that a webpage is accesible to them, but it's not only
-                beneficial for some,
-                it makes the web more easy to acces and navigate for everybody.
+            <p>
+                When we first started to study the different kinds of accessibility and what they needed from a webpage,
+                we also discovered that a lot of these changes would benefit everybody. For example with the pictures, we made
+                the different sizes to fit different screen sizes, but it will also help if the user's loading the page from a 
+                slow internet connection. Aswell with the links, first we created them with a screenreader in mind, but it also
+                make the text more coherent to read for everybody. 
             </p>
         </article>
 
     </main>
 
     <footer>
-        
-        <p>All pictures are taken from <a href="https://unsplash.com" target="_blank">Unsplash</a></p>
+
+        <ul>
+            <li>
+                <p>All pictures are free to use under the <a href="https://unsplash.com/license" target="_blank">Unsplash License</a></p>
+            </li>
+            <li>
+                <p>All fonts are free to use under the Open Font License and embeded from <a href="https://fonts.google.com/specimen/Inter#license" target="_blank">Google Fonts</a></p>
+            </li>
+        </ul>
     </footer>
 </body>
 
