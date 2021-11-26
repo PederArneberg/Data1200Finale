@@ -3,6 +3,8 @@ alle bilder er taget fra unsplash.com
 banner med "everyone can code" https://unsplash.com/photos/mDinBvq1Sfg
 bilde med gruppe av mennesker som koder https://unsplash.com/photos/QckxruozjRg
 bilde med frustation https://unsplash.com/photos/bmJAXAz6ads
+bilde av gutt på biblioteket https://unsplash.com/photos/Kyoshy7BJIQ 
+bilde av forelesningsal https://unsplash.com/photos/-8atMWER8bI
 
 
 Artikkel om bilder:
