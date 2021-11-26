@@ -5,11 +5,12 @@
     --navbar-height: 10vh;
     --main-gap: 1rem;
 
-    --color-accent: rgb(0, 143, 98);
+    --color-accent: hsl(154, 50%, 55%);
+
     --color-white: hsl(0, 0%, 93%);
     --color-black: hsl(0, 0%, 10%);
 
-    --color-shadow: rgba(0, 0, 0, 0.200);
+    --color-shadow: hsla(0, 0%, 0%, 0.2);
 
     --heading-size-multiplier: 1;
     --text-size-medium: calc(26px * var(--heading-size-multiplier));;
@@ -344,7 +345,7 @@ footer {
     background-position: 70% 0%;
     background-color: var(--color-accent);
     background-size: cover;
-    background-blend-mode: darken;
+    background-blend-mode: luminosity;
 }
 
 #fun-art div{
