@@ -335,7 +335,9 @@ footer {
     grid-row: 3;
     
     display: grid;
-    grid-template-columns: repeat(20, 1fr);
+
+    /* The rows are different for different media sizes */
+    grid-template-columns: repeat(5, 1fr);
 
     width: 100%;
     height: min(80vw, calc(100vh - var(--navbar-height)));
@@ -347,6 +349,7 @@ footer {
     background-size: cover;
     background-blend-mode: luminosity;
 }
+
 
 #fun-art div{
     width: 100%;
@@ -361,7 +364,8 @@ footer {
 }
 
 #fun-art div:hover,
-#fun-art div:active {
+#fun-art div:active,
+#fun-art div:focus {
     transition: all 0ms;
     background-color: transparent;
     box-shadow: none;
@@ -405,6 +409,10 @@ footer {
     .right {
         grid-column: 2;
     }
+
+    #fun-art{
+        grid-template-columns: repeat(10, 1fr);
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -421,6 +429,10 @@ footer {
 
     main {
         padding: var(--main-gap);
+    }
+
+    #fun-art{
+        grid-template-columns: repeat(20, 1fr);
     }
 }
 
