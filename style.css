@@ -364,8 +364,8 @@ footer {
 }
 
 #fun-art div:hover,
-#fun-art div:active,
-#fun-art div:focus {
+#fun-art div:focus,
+#fun-art div:active {
     transition: all 0ms;
     background-color: transparent;
     box-shadow: none;
