@@ -38,7 +38,7 @@
     <main>
         <h1>The web for everyone</h1>
         <article class="container text">
-            <h2>Our thoughts on web accessibility</h2>
+            <h2 tabindex="0">Our thoughts on web accessibility</h2>
             <p>
                 .Our main goal with the page, was to make a easily accessible webpage. To ensure that, we used
                 different tools to
@@ -46,6 +46,9 @@
                 webpage to make
                 sure the contrast and structure were satisfying (<a href="https://wave.webaim.org/" target="_blank">wave
                     webpage</a>)
+            </p>
+            <p>
+                A small note on the automated tests. When we get a contrast warning, as we did on our “logo” on the landing page, we need to consider the purpose of the element. In this case its not really text that requires the same contrast as if it were several paragraphs, and mor like a logo or purely visual element. Its important to balance the look of the page and the accessibility. In most casing making a page more accessible also makes it better looking, but in this case we left the logo as is. 
             </p>
             <p>
                 One of the things we had in mind when thinking about asseccibility, was to navigate the page by keybord.
@@ -76,10 +79,15 @@
                 be in any high resolution but is ment to be small and just for illustration.
             </p>
             <img class="inline" src="Img/html-validator.png" alt="A screenshot from html validator">
+            <p>
+                When it comes to the text and paragraphs on our page we wanted everything to have the same style and be very readable. To accomplish this we created a utility class called .text that is used on all containers that contain several lines of text in paragraphs. This class makes sure the distance between lines and paragraphs is optimized for readability. 
+            </p>
+
+            <p></p>
         </article>
 
         <article class="container text">
-            <h2>Essential to some - nice for everyone</h2>
+            <h2  tabindex="0">Essential to some - nice for everyone</h2>
 
             <p>
                 When we first started to study the different kinds of accessibility and what they needed from a webpage,
